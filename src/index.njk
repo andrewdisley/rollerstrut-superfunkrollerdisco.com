@@ -1,0 +1,25 @@
+---
+title: "Superfunk Roller Disco: The UK's largest and funkiest Mobile Roller Disco operator"
+meta:
+  description: "Superfunk Roller Disco are proud to lead the revival of a cult fun activity from the 70s and 80s and are taking it around the UK."
+---
+{%- from "component.njk" import component with context -%}
+{%- extends "layouts/default.njk" -%}
+
+{% block header %}
+  {{ component('header') }}
+{% endblock %}
+
+{% block content %}
+  <main>
+    <div class="leading-relaxed max-w-prose mx-auto py-12 space-y-6 text-xl">
+      <h1 class="font-bold text-4xl">Roller Disco Hire and Events</h1>
+      <p class="font-semibold">Superfunk Roller Disco are proud to lead the revival of a cult fun activity from the 70s and 80s and are taking it around the UK.</p>
+      <p>We provide everything from stand-alone skate hire to full roller disco packages including qualified roller skating instructors, skate marshals, DJ's and even mobile roller rink installations perfect for festivals, summer fairs, shopping centres and large scale community events. If you're from a school, college, university, borough council or private company, or really just fancy holding a roller disco party for yourself or your child, please <a class="underline" href="#/contact/">get in touch</a> with Rach for a quote.</p>
+    </div>
+  </main>
+{% endblock %}
+
+{% block footer %}
+  {{ component('footer') }}
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title if title else site.title }}</title>
+    <link rel="stylesheet" href="/assets/styles/{{ site.shortname }}.css">
+    {% if site.meta.noIndex -%}
+      <meta name="robots" content="noindex">
+    {%- endif %}
+    {% if meta.description -%}
+      <meta name="description" content="{{ meta.description }}">
+    {%- endif %}
+  </head>
+  <body>
+    {% block header %}{% endblock %}
+    {% block content -%}
+      {{ content | safe }}
+    {%- endblock %}
+    {% block footer %}{% endblock %}
+  </body>
+</html>
