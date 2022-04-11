@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "evenodd",
+    "heroicon",
+    "prettierrc",
+    "rsrd"
+  ]
+}

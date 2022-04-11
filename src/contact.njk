@@ -1,0 +1,49 @@
+---
+title: 'Contact Superfunk Roller Disco'
+permalink: /contact/
+meta:
+  description:
+---
+{%- from "component.njk" import component with context -%}
+{%- extends "layouts/default.njk" -%}
+
+{%- set sectionClasses = "px-6 py-16 space-y-12 lg:py-24" -%}
+{%- set sectionHeaderClasses = "container max-w-3xl mx-auto space-y-4 text-center" -%}
+{%- set sectionHeadlineClasses = "font-bold leading-8 text-3xl text-slate-200 tracking-wide lg:text-5xl" -%}
+{%- set sectionLeadClasses = "text-2xl font-normal text-slate-300 tracking-wide lg:text-3xl" -%}
+
+{% block header %}
+  {{ component('header') }}
+{% endblock %}
+
+{% block content %}
+<main>
+
+  <div class="{{ sectionClasses }}">
+    <header class="{{ sectionHeaderClasses }}">
+      <h1 class="{{ sectionHeadlineClasses }}">Contact <span class="sr-only"> Superfunk Roller Disco</span></h1>
+      <p class="{{ sectionLeadClasses }}">Get in touch with Rach on the details below for more info or a quote.</p>
+      {# <p class="{{ sectionLeadClasses }}">Get in touch with Rach on the details below for more info or a quote, or complete our event enquiry form.</p> #}
+    </header>
+  </div>
+
+  <div class="{{ sectionClasses }} bg-zinc-800">
+    <div class="font-normal max-w-2xl mx-auto space-y-6 text-2xl text-center text-slate-200 tracking-wide lg:text-3xl">
+      <h2 class="font-semibold text-white">Email</h2>
+      <p>Rach anytime at <a class="text-pink-600 underline underline-offset-4 hover:no-underline hover:text-pink-500" href="mailto:info@superfunkrollerdisco.com">info@superfunkrollerdisco.com</a></h2>
+    </div>
+  </div>
+
+  <div class="{{ sectionClasses }} bg-zinc-900">
+    <div class="font-normal max-w-2xl mx-auto space-y-6 text-2xl text-center text-slate-200 tracking-wide lg:text-3xl">
+      <h2 class="font-semibold text-white">Telephone</h2>
+      <p>Give Rach a call on <a class="text-pink-600 underline underline-offset-4 hover:no-underline hover:text-pink-500" href="tel:+447866356791">07866 356791</a></h2>
+    </div>
+  </div>
+
+</main>
+{% endblock %}
+
+{% block footer %}
+  {{ component('footer') }}
+{% endblock %}

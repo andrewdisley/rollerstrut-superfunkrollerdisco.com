@@ -1,7 +1,13 @@
-<header class="bg-zinc-900 py-10 text-3xl text-white bg-gradient-to-b from-zinc-900 to-black">
-  <div class="max-w-4xl mx-auto space-y-10 text-center">
-    <div>
-      <a class="font-medium no-underline underline-offset-2 hover:underline" href="/" title="Go to the Superfunk Roller Disco homepage">Superfunk Roller Disco</a>
-    </div>
+<header class="bg-zinc-900 py-4 text-base text-white bg-gradient-to-b from-zinc-900 to-black lg:py-12 lg:text-lg">
+  <div class="max-w-4xl mx-auto p-4 text-center lg:flex lg:items-center lg:justify-between">
+    <a aria-label="Go to the DriveElectricSuperfunk Roller Disco homepage" class="flex-shrink-0 font-bold inline-flex mb-6 tracking-wide uppercase lg:mb-0" href="/" title="Go to the Superfunk Roller Disco homepage">
+      <img alt="Superfunk Roller Disco logo" class="mx-auto" height="50" src="/assets/images/global/superfunkrollerdisco.png" width="135">
+    </a>
+    <nav>
+      <ul class="flex space-x-4 items-center justify-center">
+        <li><a {% if '/testimonials/' in page.url %}aria-current="page"{% endif %} class="{{ 'bg-zinc-800' if '/testimonials/' in page.url else 'bg-zinc-700' }} block font-medium px-4 py-1 rounded-full tracking-wide hover:bg-black focus-visible:bg-black" href="/testimonials/">Testimonials</a></li>
+        <li><a {% if '/contact/' in page.url %}aria-current="page"{% endif %} class="{{ 'bg-zinc-800' if '/contact/' in page.url else 'bg-zinc-700' }} block font-medium px-4 py-1 rounded-full tracking-wide hover:bg-black focus-visible:bg-black" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

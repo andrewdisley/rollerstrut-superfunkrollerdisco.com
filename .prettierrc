@@ -9,18 +9,18 @@
   "useTabs": false,
   "overrides": [
     {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
       "files": "*.md",
       "options": {
         "arrowParens": "avoid",
         "printWidth": 70,
         "proseWrap": "preserve",
         "trailingComma": "none"
-      }
-    },
-    {
-      "files": ".prettierrc",
-      "options": {
-        "parser": "json"
       }
     }
   ]
