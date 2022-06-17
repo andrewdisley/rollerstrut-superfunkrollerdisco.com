@@ -6,12 +6,13 @@ meta:
 {%- from "component.njk" import component with context -%}
 {%- extends "layouts/default.njk" -%}
 
-{%- set sectionClasses = "px-6 py-16 space-y-12 lg:py-24" -%}
-{%- set sectionHeaderClasses = "container max-w-3xl mx-auto space-y-4 text-center" -%}
+{%- set sectionClasses = "px-4 py-8 space-y-8 lg:py-10" -%}
+{%- set sectionHeaderClasses = "container max-w-xl mx-auto space-y-2 text-center" -%}
 {%- set sectionPreHeadlineClasses = "-mb-2 text-base font-medium tracking-wide text-pink-600 uppercase lg:text-lg" -%}
-{%- set sectionHeadlineClasses = "font-bold leading-8 text-3xl text-slate-200 tracking-wide lg:text-5xl" -%}
-{%- set sectionLeadClasses = "text-2xl font-normal text-slate-300 tracking-wide lg:text-3xl" -%}
-{%- set bodyText = "text-xl font-normal text-slate-200 tracking-wide lg:text-2xl" -%}
+{%- set sectionHeadlineClasses = "font-semibold text-3xl text-slate-100 tracking-wide lg:text-4xl" -%}
+{%- set sectionLeadClasses = "text-xl font-medium text-slate-100 lg:text-2xl" -%}
+{%- set bodyText = "text-center text-xl font-normal text-slate-100 md:text-left lg:text-2xl !leading-[1.35]" -%}
+{# TODO: leading sizing #}
 
 {% block header %}
   {{ component('header') }}
@@ -24,38 +25,62 @@ meta:
   <div class="{{ sectionClasses }}">
     <header class="{{ sectionHeaderClasses }}">
       <p class="{{ sectionPreHeadlineClasses }}">Superfunk</p>
-      <h1 class="{{ sectionHeadlineClasses }}">Roller Disco Hire and Events</h1>
-      <p class="{{ sectionLeadClasses }}">Superfunk Roller Disco are proud to lead the revival of a cult fun activity from the 70’s and 80’s and are taking it around the UK.</p>
+      <h1 class="{{ sectionHeadlineClasses }}">Roller Disco Hire</h1>
+      <p class="{{ sectionLeadClasses }}">Superfunk Roller Disco is proud to lead the revival of a cult fun activity from the 70s and 80s.</p>
     </header>
-    <figure class="aspect-video container max-w-5xl text-center bg-red-100">
+    <figure class="aspect-video container max-w-5xl bg-red-100">
       <picture>
         <img alt="" class="" height="720" src="/assets/images/home-01.jpg" width="1280">
       </picture>
     </figure>
-    <div class="{{ bodyText }} container max-w-4xl space-y-6 text-center">
-      <p>With over 14 years of experience in providing skating tuition and roller disco events to schools, colleges, universities, leisure centres, festival organisers and corporate clients, we can be flexible to work within a range of venues and budgets.</p>
+    <div class="{{ bodyText }} container max-w-4xl space-y-6">
+      <p>We have 14 years’ experience in delivering roller disco events to schools, colleges, universities, leisure centres, festival organisers and corporate clients.</p>
     </div>
-    <figure class="aspect-video container max-w-5xl text-center bg-red-100">
-      <picture>
-        <img alt="" class="" height="720" src="/assets/images/home-02.jpg" width="1280">
-      </picture>
-    </figure>
   </div>
   {#- END: Intro -#}
 
+  {#- START: Gallery -#}
+  <div class="relative w-full flex gap-4 snap-x snap-mandatory overflow-x-auto pl-4">
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-quadrollerdiscoskates-2018.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-naturalhistorymuseum-rollerdisco-2022.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-carfestfestival-rollerdisco-2019.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-rollerdisco-universityofsheffield--2022.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-inlinerollerdiscoskates-2019.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-manchesteracademy-rollerdisco-2021.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-adobesummit-rollerdisco-london-excel-2018.jpg" width="572">
+    </div>
+    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/assets/images/home-rollerdisco-solihullbirmingham-2021.jpg" width="572">
+    </div>
+  </div>
+  {#- END: Gallery -#}
+
   {#- START: Services -#}
-  <section class="{{ sectionClasses }} bg-zinc-900">
+  <section class="{{ sectionClasses }}">
     <header class="{{ sectionHeaderClasses }}">
-      <p class="{{ sectionPreHeadlineClasses }}">Services</p>
-      <h2 class="{{ sectionHeadlineClasses }}">Experienced and professional skate services and crew</h2>
-      <p class="{{ sectionLeadClasses }}">We provide everything from standalone skate hire to full roller disco packages. Some of our key services:</p>
+      <p class="{{ sectionPreHeadlineClasses }}">Experienced</p>
+      <h2 class="{{ sectionHeadlineClasses }}">Mobile roller disco crew</h2>
+      <p class="{{ sectionLeadClasses }}">We provide everything from standalone skate hire to full roller disco packages.</p>
     </header>
     {#- Background blur with images behind? #}
-    <div class="container gap-6 grid grid-cols-1 items-stretch max-w-6xl mx-auto sm:grid-cols-2 lg:gap-8 lg:grid-cols-3">
+    <div class="container gap-6 grid grid-cols-1 items-stretch max-w-6xl mx-auto sm:grid-cols-2 lg:grid-cols-3">
       {%- for item in collections.services %}
-        <article class="inline-flex flex-col rounded-2xl bg-zinc-800 p-4 lg:px-8 lg:py-6">
+        <article class="inline-flex flex-col rounded-2xl px-4 py-6 lg:p-8 border border-pink-600 bg-superfunk-dark">
           <header class="mb-4 flex flex-row-reverse items-center justify-between">
-            {%- if item.data.service.heroicon_path %}
+            {%- if item.data.service.heroicon_path1 %}
             <div class="flex-shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-900">
               <svg aria-hidden="true" class="h-8 w-8" fill="none" height="32" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg" >
                 {{- item.data.service.heroicon_path | safe -}}
@@ -68,25 +93,18 @@ meta:
             </h3>
           </header>
           {%- if item.data.service.excerpt %}
-            <p class="mb-4 text-lg text-opacity-80 text-white lg:text-xl">{{ item.data.service.excerpt }}</p>
+            <p class="text-lg text-opacity-80 text-white lg:text-xl">{{ item.data.service.excerpt }}</p>
           {% endif -%}
-          <svg xmlns="http://www.w3.org/2000/svg" class="mt-auto h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          {# <svg xmlns="http://www.w3.org/2000/svg" class="mt-auto h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+          </svg> #}
         </article>
       {% endfor -%}
     </div>
-  </section>
-  {#- END: Services -#}
-
-  {#- START: Extra -#}
-  <section class="{{ sectionClasses }} bg-black">
     <div class="{{ bodyText }} container max-w-4xl space-y-6">
-      <p>If your venue has a suitable flooring already (i.e. most sports hall floors, wood, high quality laminate, smooth concrete) then there is no need for a mobile rink or flooring cover. We can simply roll up with our skates and safety equipment.</p>
-      <p>Our mobile rinks are perfect for festivals, summer fairs, shopping centres and large scale community events, or to cover unsuitable flooring such as marble, slightly bumpy surfaces etc.</p>
-      <p>Roller skates and pads can simply be hired as a standalone package, and delivered to and collected from a venue of your choice.</p>
+      <p>If your venue has a suitable flooring already then there is no need for a mobile rink or flooring cover. We can simply roll up with our skates and safety equipment.</p>
       <p>If you wish to set up your own regular roller disco, we can assist with this too providing advice, training for your staff, and equipment hire for a trial event before you commit to spending on equipment.</p>
-      <p>We also cater for private parties, so if really just fancy holding a roller disco party for yourself or a member of your family, please <a class="text-pink-600 underline underline-offset-4 hover:no-underline hover:text-pink-500" href="/contact/">get in touch</a> with Rach for a quote.</p>
+      <p>Pricing is bespoke per event, so please <a class="text-pink-600 underline underline-offset-4 hover:no-underline hover:text-pink-500" href="/contact/">get in touch</a> with Rach for a quote.</p>
     </div>
   </section>
   {#- END: Extra -#}
