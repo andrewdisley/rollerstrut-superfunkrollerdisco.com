@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+  body {
+    @apply antialiased;
+  }
+
+  /* Links */
+  a,
+  button {
+    @apply underline hover:no-underline;
+
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    text-decoration-skip: none;
+    text-underline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    background-color: #FFEB00 !important;
+    color: #000 !important;
+    outline-color: transparent;
+    outline-style: solid;
+    outline-width: 3px;
+    -webkit-text-decoration-line: none;
+    text-decoration-line: none;
+  }
+
+}

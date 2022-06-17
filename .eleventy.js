@@ -2,6 +2,9 @@ const dumpFilter = require('@jamshop/eleventy-filter-dump');
 const htmlmin = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
+  // Copies content of ./src/_previous to ./dist/
+  eleventyConfig.addPassthroughCopy({ 'src/_previous/': '/' });
+
   // Copies content of ./src/static to ./dist/
   eleventyConfig.addPassthroughCopy({ 'src/static/': '/' });
 

@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       colors: {
         superfunk: {
-          dark: '#121212',
+          dark: '#171717',
           'dark-2': '#292929',
           blue: '#2399CA',
           'blue-light': '#27AAE1',
@@ -21,6 +21,12 @@ module.exports = {
           'pink-light': '#E53E94',
           yellow: '#FFEB00',
         },
+      },
+      height: {
+        headerlogo: '3.75rem',
+      },
+      width: {
+        headerlogo: '10.375rem',
       },
     },
   },
