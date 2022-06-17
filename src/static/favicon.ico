@@ -1,0 +1,5 @@
+#auto: true
+destination: ../Website
+#permalink: /jobs/:title
+url: http://superfunkrollerdisco.com/
+exclude: ['Rakefile']

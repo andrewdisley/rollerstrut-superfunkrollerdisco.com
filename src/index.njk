@@ -30,7 +30,13 @@ meta:
     </header>
     <figure class="aspect-video container max-w-5xl">
       <picture>
-        <img alt="" class="" height="720" src="/images/home-mobilerollerdiscorink.jpg" width="1280">
+        <source media="(min-width: 1024px)" srcset="/images/home-mobilerollerdiscorink-2048x-1152.webp" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="/images/home-mobilerollerdiscorink-2048x-1152.jpg" type="image/jpeg">
+        <source media="(min-width: 600px)" srcset="/images/home-mobilerollerdiscorink-1200x675.webp" type="image/webp">
+        <source media="(min-width: 600px)" srcset="/images/home-mobilerollerdiscorink-1200x675.jpg" type="image/jpeg">
+        <source srcset="/images/home-mobilerollerdiscorink-768x432.webp" type="image/webp">
+        <source srcset="/images/home-mobilerollerdiscorink-768x432.jpg" type="image/jpeg">
+        <img alt="" class="h-auto w-full" height="216" src="/images/home-mobilerollerdiscorink-768x432.jpg" width="384">
       </picture>
     </figure>
     <div class="{{ bodyText }} container max-w-4xl space-y-6">
@@ -40,31 +46,26 @@ meta:
   {#- END: Intro -#}
 
   {#- START: Gallery -#}
+  {%- set gallery = [
+    { image: 'home-quadrollerdiscoskates-2018' },
+    { image: 'home-naturalhistorymuseum-rollerdisco-2022' },
+    { image: 'home-carfestfestival-rollerdisco-2019' },
+    { image: 'home-rollerdisco-universityofsheffield-2022' },
+    { image: 'home-inlinerollerdiscoskates-2019' },
+    { image: 'home-manchesteracademy-rollerdisco-2021' },
+    { image: 'home-adobesummit-rollerdisco-london-excel-2018' },
+    { image: 'home-rollerdisco-solihullbirmingham-2021' }
+  ] -%}
   <div class="relative w-full flex gap-4 snap-x snap-mandatory overflow-x-auto pl-4 py-4 lg:py-6">
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-quadrollerdiscoskates-2018.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-naturalhistorymuseum-rollerdisco-2022.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-carfestfestival-rollerdisco-2019.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-rollerdisco-universityofsheffield-2022.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-inlinerollerdiscoskates-2019.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-manchesteracademy-rollerdisco-2021.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-adobesummit-rollerdisco-london-excel-2018.jpg" width="572">
-    </div>
-    <div class="snap-center shrink-0 w-4/5 sm:w-auto">
-      <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/home-rollerdisco-solihullbirmingham-2021.jpg" width="572">
-    </div>
+    {% for item in gallery %}
+    <figure class="snap-center shrink-0 w-4/5 sm:w-auto">
+      <picture>
+        <source srcset="/images/{{ item.image }}.webp" type="image/webp">
+        <source srcset="/images/{{ item.image }}.jpg" type="image/jpeg">
+        <img alt="" class="object-cover h-52 w-full rounded-lg sm:h-auto sm:w-96" height="322" src="/images/{{ item.image }}.jpg" width="572">
+      </picture>
+    </figure>
+    {% endfor %}
   </div>
   {#- END: Gallery -#}
 
