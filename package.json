@@ -13,8 +13,8 @@
   "main": "dist/index.html",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "ELEVENTY_ENV=prd NODE_ENV=production npm run clean && npx @11ty/eleventy & npx tailwindcss -i src/_assets/styles/main.css -o dist/assets/styles/$npm_package_config_shortname.css --minify",
-    "dev": "ELEVENTY_ENV=dev npm run clean && npx @11ty/eleventy --serve & npx tailwindcss -i src/_assets/styles/main.css -o dist/assets/styles/$npm_package_config_shortname.css --watch",
+    "build": "ELEVENTY_ENV=prd NODE_ENV=production npx @11ty/eleventy & npx tailwindcss -i src/_assets/styles/main.css -o dist/$npm_package_config_shortname.css --minify",
+    "dev": "ELEVENTY_ENV=dev npm run clean && npx @11ty/eleventy --serve & npx tailwindcss -i src/_assets/styles/main.css -o dist/$npm_package_config_shortname.css --watch",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [
