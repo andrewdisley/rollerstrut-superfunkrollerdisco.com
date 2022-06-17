@@ -3,7 +3,5 @@ module.exports = {
   eleventyEnv: process.env.ELEVENTY_ENV,
   shortname: process.env.npm_package_config_shortname,
   title: process.env.npm_package_config_title,
-  meta: {
-    noIndex: true,
-  },
+  meta: {},
 };
