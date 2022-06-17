@@ -1,0 +1,35 @@
+/*!
+	Site:		Rollerstrut: Superfunk Roller Disco
+	File:		universities.css
+	Author:		Andrew Disley, Simplified http://simplified.co.uk/
+	Version:	2010-02-12
+----------------------------------------------- */
+
+/* 
+pink: F00986
+blue: 009CE9
+yellow: FFEB00
+*/
+
+/**	Structure
+----------------------------------------------- */
+* { margin: 0; padding: 0; }
+img { border: none; vertical-align: bottom; }
+body { background-color: #000000; color: #FFFFFF; font: 62.5%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#Container { font-size: 1.8000em; margin: 0 auto; width: 760px; }
+a:link, a:visited { background-color: #000000; color: #009CE9; text-decoration: underline; }
+a:hover, a:active { background-color: #000000; color: #F00986; text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; font-weight: bold; line-height: 1; margin-bottom: 0.3em; text-transform: uppercase; }
+h1 { font-size: 2.6666em; }
+h1 strong { background-color: #000000; color: #FFEB00; }
+h1 strong.alt { background-color: #000000; color: #009CE9; }
+h2 { background-color: #000000; color: #F00986; font-size: 32px; }
+p { margin-bottom: 1em; }
+p strong { background-color: #000000; color: #FFEB00; }
+ul { margin-bottom: 1em; }
+ul li { margin-bottom: 5px; margin-left: 20px; }
+p.download { background-color: #F00986; color: #FFFFFF; padding: 10px; }
+p.download strong { background-color: #F00986; color: #FFFFFF; }
+p.download a { background-color: #F00986; color: #FFEB00; }
+p.footer { clear: both; margin-top: 30px; }
+/* **/
