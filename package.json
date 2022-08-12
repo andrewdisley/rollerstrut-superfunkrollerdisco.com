@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/andrewdisley/rollerstrut-superfunkrollerdisco.com#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.0-canary.14",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
     "html-minifier": "^4.0.0",
     "prettier": "^2.7.1",
