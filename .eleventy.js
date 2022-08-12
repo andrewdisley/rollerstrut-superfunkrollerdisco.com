@@ -1,4 +1,4 @@
-const dumpFilter = require('@jamshop/eleventy-filter-dump');
+const debugFilter = require('@jamshop/eleventy-filter-dump');
 const htmlmin = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/_assets/styles/main.css');
 
   // https://github.com/jamshop/eleventy-filter-dump
-  eleventyConfig.addFilter('dump', dumpFilter);
+  eleventyConfig.addFilter('debug', debugFilter);
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
