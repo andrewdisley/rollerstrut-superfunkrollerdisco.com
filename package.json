@@ -1,6 +1,6 @@
 {
   "name": "rollerstrut-superfunkrollerdisco-website",
-  "version": "0.0.1",
+  "version": "2.0.2",
   "description": "Website for Superfunk Roller Disco built on Eleventy and deployed to Netlify.",
   "config": {
     "shortname": "rsrd",
@@ -30,14 +30,12 @@
     "url": "https://github.com/andrewdisley/rollerstrut-superfunkrollerdisco.com/issues"
   },
   "homepage": "https://github.com/andrewdisley/rollerstrut-superfunkrollerdisco.com#readme",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^1.0.1",
+    "@jamshop/eleventy-filter-dump": "^1.0.4",
     "html-minifier": "^4.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8"
-  },
-  "dependencies": {
-    "@jamshop/eleventy-filter-dump": "^1.0.4"
   }
 }
